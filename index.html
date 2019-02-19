@@ -409,7 +409,7 @@ find.sig.loci&lt;- function(msap.input){
   message(&quot;Calculating FDR using benjamini and hochberg \n&quot;)
   #result of the fisher test wit p-vale adjustment using benjamini
   
-  grpALL_LOCI=data.frame(loci,pval,p.adjust(pval,method = &quot;hochberg&quot;))
+  grpALL_LOCI=data.frame(loci,pval,p.adjust(pval,method = &quot;BH&quot;))
   
   message(&quot;filtering significant loci \n&quot;)
   ### filter the loci with FDR &lt;0.05
